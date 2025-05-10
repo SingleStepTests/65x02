@@ -24,7 +24,7 @@ All tests assume the entire 64KiB memory space is RAM. Since this is different f
 
 The `ram` elements inside the `initial` and `final` sections of the test, are in the form of `[address, value]`.
 
-Memory at any address besides those listed in the test, are expected to contain zeros.
+Any memory address not included in a test's `ram` lists must not be accessed during that test. However, there may be memory addresses in the `ram` lists that are never accessed during the test.
 
 ## Test Procedure
 
